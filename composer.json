@@ -1,0 +1,13 @@
+{
+    "name": "webhook-guardian/webhook-guardian",
+    "description": "Exact-body HMAC authentication and atomic webhook delivery deduplication",
+    "type": "library",
+    "license": "MIT",
+    "require": {"php": "^8.3", "ext-hash": "*", "ext-json": "*"},
+    "require-dev": {"ext-pdo": "*", "ext-pdo_sqlite": "*", "phpunit/phpunit": "^11.5", "phpstan/phpstan": "^2.1"},
+    "suggest": {"ext-pdo": "Required for the SQLite adapter", "ext-pdo_sqlite": "Required for the SQLite adapter"},
+    "autoload": {"psr-4": {"WebhookGuardian\\": "src/"}},
+    "autoload-dev": {"psr-4": {"WebhookGuardian\\Tests\\": "tests/"}},
+    "scripts": {"test": "phpunit", "analyse": "phpstan analyse --no-progress", "check": ["@test", "@analyse"]},
+    "config": {"sort-packages": true}
+}

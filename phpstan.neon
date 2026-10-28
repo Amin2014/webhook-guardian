@@ -1,0 +1,7 @@
+parameters:
+    level: max
+    # Public array arguments are validated at runtime, even when callers violate PHPDoc.
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - src
+        - examples
